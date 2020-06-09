@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="siteLayout.master.cs" Inherits="JibFjob_PFF.siteLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+
+    <link href="icon/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+        <header id="headOfBody">
+        
+        <a href="index.html" id="linklog"><img src="/img/logo.png" alt="Logo" id="logo"></a>
+        <nav id="navbar">
+            <ul id="navbar-ul">
+                <li><a href="/Home.aspx">Home</a></li>
+                <li><a href="#emploisSec">Emplois</a></li>
+                <li><a href="#candidatsSec">Candidats</a></li>
+                <li id="liBtns">
+                    <a href="/Compte/Login.aspx" id="btnSignIn" class="btn">Sign In</a>
+                    <a href="~/Utilisateurs/Create" id="btnSignUp" class="btn btn-Up" data-target="#loginModal" data-toggle="modal">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+
+            <a href="#" id="toggle">
+            menu
+        </a>
+
+    </header>
+
+
+
+    <form id="form1" runat="server" style="padding:80px 10%; margin:auto">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+
+    <div class="modal po" id="loginModal" tabindex="-1">
+
+        <div class="modal-dialog" style="width:300px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="/" method="post" class="formCont">
+                        <div class="form-group">
+                            <label for="Username" style="font-size:18px">
+                                <i class="zmdi zmdi-account material-icons-name"></i>
+                            </label>
+                            <input type="text" name="Username" placeholder="Username" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="zmdi zmdi-email"></i>
+                            </label>
+                            <input type="email" name="email" placeholder="Email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="UserType">
+                                <i class="zmdi zmdi-account-box"></i>
+                            </label>
+                            <select name="UserType">
+                                <option value="idvidual">Idvidual</option>
+                                <option value="entreprise">Entreprise</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mdp">
+                                <i class="zmdi zmdi-lock"></i>
+                            </label>
+                            <input type="password" name="mdp" placeholder="Mot de Passe" />
+                        </div>
+
+                        <div class="form-group form-button">
+                            <input class="form-submit" type="submit" name="btnSub" value="Submit" />
+                            <a href="~/Utilisateurs/SignUp">Go to main Page</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footOfBody" style="margin-top:50px" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h3>About Us</h3>
+                    <p>
+                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                        <br>Lorem Ipsum Lorem Ipsum
+                        Lorem Ipsum Lorem Ipsum Lorem
+                        <br> Ipsum Lorem Ipsum
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-8">
+                    <h3>Important Link</h3>
+                    <ul>
+                        <li><a href="#">Job in Marrakesh</a></li>
+                        <li><a href="#">Job in Maroc</a></li>
+                        <li><a href="#">Job in France</a></li>
+                        <li><a href="#">Job in Sinigal</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li>
+                            <a href="#" class="fb">
+                                <i class="fab fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tw">
+                                <i class="fab fa-twitter"></i>
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="ig">
+                                <i class="fab fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="yt">
+                                <i class="fab fa-youtube"></i>
+                                Youtube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="subFooter">All rights Reserved To Jobfjib.ma 2020</div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/font-awsome.js"></script>
+    <script src="/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/index.js"></script>
+
+</body>
+</html>
