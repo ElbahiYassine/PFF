@@ -13,80 +13,46 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../icon/css/material-design-iconic-font.min.css" rel="stylesheet" />
     <link href="../Content/loginCss.css" rel="stylesheet" />
-    <link href="../Content/signup.css" rel="stylesheet" />
-
-    <style>
-        .inpts
-        {
-            width: 100%;
-            display: block;
-            border: none;
-            border-bottom: 1px solid #999;
-            padding: 6px 30px;
-            box-sizing: border-box;
-            outline: none;
-        }
-
-        .head
-        {
-            height:150px;
-        }
-
-        .foot
-        {
-            width:100%;
-            position:relative;
-            bottom:-33px;
-        }
-
-    </style>
+    <%--<link href="../Content/signup.css" rel="stylesheet" />--%>
 
 </head>
 <body>
 
    <header>
         
-        <a href="/Home.aspx"><img src="/img/logo.png" alt="Logo"/></a>
+        <a href="/Home.aspx"><img src="/img/logo.png" alt="Logo" id="logo"/></a>
 
     </header>
 
     <div class="mainContent">
-        <div class="main">
+        
 
-            <div class="head">
-                <h2 class="titre">Connectez-vous à JibFjob</h2>
-            </div>
 
             <form action="/" method="post" runat="server">
+                   <div id="login">
+           
+                       <div id="soc">
+                          <span>Connectez-vous avec</span>
+                           <a href="#" id="fb"><img src="/img/facebookyellow.png" alt=""/></a>
+                           <a href="#" id="google"><img src="/img/googleYellow.png" alt=""/></a>
+                       </div>
+                       <div id="loginMail">
 
-                <div class="form-group">
-                    <label for="Username" style="font-size:18px">
-                        <i class="zmdi zmdi-account material-icons-name"></i>
-                    </label>
-                    <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" class="inpts"></asp:TextBox>
-                </div>
+                           <p><asp:TextBox class="input" ID="txtEmail" runat="server" placeholder="Email" ></asp:TextBox></p>
+                           <p><asp:TextBox class="input" ID="txtMdp" runat="server" placeholder="Mot de passe" type="password"></asp:TextBox></p>
+                           <a href="#">Oublié Mot de Passe ?</a>
+                           <asp:Button ID="btnCon" runat="server" Text="Connexion"  class="button" />
+               
 
-                <div class="form-group">
-                    <label for="Username" style="font-size:18px">
-                        <i class="zmdi zmdi-lock"></i>
-                    </label>
-                    <asp:TextBox ID="txtMdp" runat="server" placeholder="Mot de passe" class="inpts"></asp:TextBox>
-                </div>
+                       </div>
+                       <p id="dha">Vous n'avez pas de compte? <a href="#">S'inscrire</a></p>
+                   </div>
 
-                <div class="form-group form-button">
-                    <asp:Button ID="btnCon" runat="server" Text="Connexion"  class="form-submit" />
-                    <a href="www.google.com" >Oublié Mot de Passe ?</a>
-                </div>
-                
             </form>
 
-            <div class="foot">
-                <a href="#" class="membre">j'ai déja un Compte</a>
-            </div>
-            
-
-        </div>
     </div>
+    
+
 
     <footer>
 

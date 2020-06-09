@@ -80,9 +80,12 @@
     <Content Include="icon\css\material-design-iconic-font.css" />
     <Content Include="icon\css\material-design-iconic-font.min.css" />
     <Content Include="icon\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="img\facebookyellow.png" />
+    <Content Include="img\googleYellow.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\signin-image.jpg" />
     <Content Include="img\signup-image.jpg" />
+    <Content Include="img\Untitled-1.png" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\font-awsome.js" />
     <Content Include="Scripts\index.js" />
